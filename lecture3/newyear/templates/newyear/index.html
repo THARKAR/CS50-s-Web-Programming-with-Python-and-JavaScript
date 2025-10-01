@@ -1,0 +1,20 @@
+<!-- Write the below to load static files -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- We can use hard code but the below is better  -->
+    <link rel="stylesheet" href="{% static 'newyear/styles.css' %}">
+    <title>New Year Page</title>
+</head>
+<body>
+    {% if newyear %}
+        <h1>Yes</h1>
+    {% else %}
+        <h1>No</h1>
+    {% endif %}
+</body>
+</html>

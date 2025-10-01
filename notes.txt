@@ -1,0 +1,45 @@
+Django Notes
+
+Create A Project==========
+django-admin startproject Project_Name
+
+Rung Project================
+python manage.py runserver
+
+
+Create App in the project================
+python manage.py startapp App_Name
+
+
+After Creating App, 
+we register the new app in the setting.py file in project folder
+we write view in the view files and put those view to the custom created urls file the app
+we connect the urls file from the app to the urls file in the project
+
+
+We normally render html files for the veiw, but occasionally use HttpResponse method for testing purpose to response
+
+we pass request (mandatory parameter), and most of the time, another optional parameter is passed in the render functions
+
+
+Using templates==========
+In an App, Create templates>template_name>template_file.html.. and so on.
+for eg..    templates>hello>index.html
+            templates>hello>other.html
+            templates>Info>index.html
+            templates>Info>InfoDetails.html
+
+etc....
+
+Django uses Templating Languange, jinja
+
+In HTML templates, use Kalibracess for using the passing variable from Python in the HTML 
+
+
+Usign Status File===================
+Static File for the CSS, Javascript
+In an App, Create templates>static_name>style.css
+
+
+
+

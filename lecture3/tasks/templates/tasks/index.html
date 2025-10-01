@@ -1,0 +1,17 @@
+
+{% extends 'tasks\layout.html' %}
+{% block body %}
+    <h1>Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% empty %}
+            <li>No Task</li>
+        {% endfor %}
+    </ul>
+    <!-- Hyperlnik to a specifice route and add app_name = tasks in the app URL file 
+        tasks:add
+        tasks is app_name and add, url name in the app url file 
+    -->
+    <a href="{% url 'tasks:add' %}">Add A New Task</a>
+{% endblock %}
