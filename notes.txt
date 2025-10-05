@@ -1,5 +1,7 @@
 Django Notes
 
+
+
 Create A Project==========
 django-admin startproject Project_Name
 
@@ -9,6 +11,8 @@ python manage.py runserver
 
 Create App in the project================
 python manage.py startapp App_Name
+
+python manage.py help - To get the list of Django commands
 
 
 After Creating App, 
@@ -36,9 +40,65 @@ Django uses Templating Languange, jinja
 In HTML templates, use Kalibracess for using the passing variable from Python in the HTML 
 
 
-Usign Status File===================
+Usign Static File===================
 Static File for the CSS, Javascript
-In an App, Create templates>static_name>style.css
+In an App, Create static>static_name>style.css
+
+
+Models
+Creating Model in model file in an app
+
+python manage.py makemigrations - Establish Migration
+python manage.py migrate - Migrating the database
+
+python manage.py shell - Entering Python Shell / Django Sheel to interact with the database
+
+from app_name.modelfile import created_model_name
+
+Saving Data
+model.save()
+
+
+get all data Quering
+model.objects.all()
+
+
+get the first item from the table (Model in Django)
+all_data  = model.objects.all()
+all_data.first()
+
+
+To get the propertis of a table (Model in Django)
+all_data  = model.objects.all()
+firstObject = all_data.first()
+firstObject.property_name
+
+
+To delete an object data in Django
+dataObject.delete()
+
+Filtering data objet
+table.objects.filter(propertyName="Anything")
+
+table.objects.filter(propertyName="Anything").first() - The first met object data is returned back
+
+table.objects.get(propertyName="Anything") - Get one result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
