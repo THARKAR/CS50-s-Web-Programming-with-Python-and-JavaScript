@@ -1,11 +1,20 @@
 {% extends 'flights/layout.html' %}
 
 {% block body %}
+<style>
+    li {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: black;
+        text-decoration: none;
+    }
+</style>
 <body>
     <h1>Flights</h1>
     <ul>
         {% for flight in flights %}
-        <li>Flight: {{ flight.id }} {{ flight.origin }} to {{ flight.destination }}</li>
+        <a href="{% url 'flight' flight.id %}">
+            <li>Flight: {{ flight.id }} {{ flight.origin }} to {{ flight.destination }}</li>
+        </a>
         {% endfor %}
     </ul>
 </body>

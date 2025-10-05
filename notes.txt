@@ -85,6 +85,25 @@ table.objects.filter(propertyName="Anything").first() - The first met object dat
 table.objects.get(propertyName="Anything") - Get one result
 
 
+Create Super User
+python manage.py createsuperuser
+
+Register Models to admin.py in the app folder
+admin.site.register(ModelName)
+
+
+request.Post['name'] - Get posted data
+
+request.method == "POST" - Check Request method
+
+Use Form > Action Attribute and Method
+
+Use { csrf_token } right before the submit attribute
+
+
+Passenger.objects.exclude(flights=flight).all()
+
+
 
 
 
