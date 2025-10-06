@@ -104,8 +104,7 @@ Use { csrf_token } right before the submit attribute
 Passenger.objects.exclude(flights=flight).all()
 
 
-
-
+Some View Function does not its own actual view (html etc..). Just Functionalities
 
 
 
